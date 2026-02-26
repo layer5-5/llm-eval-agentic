@@ -141,4 +141,4 @@ out into deep space.
   Total tokens: 15661
   Turns:       21
   Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Llama_3.3_70B_bash.log
-  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_meta-llama_llama-3.3-70b-instruct_bash_20260226_142555.json
+  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_meta-llama_llama-3.3-70b-instruct_bash_20260226_153448.json

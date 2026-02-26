@@ -4,54 +4,57 @@ Token limit: 50000
 [Turn 1] +770 tokens (total: 770)
   TOOL: look(None)
   OUT:  You are in the station's airlock. Emergency lights pulse red. The outer hatch is sealed shut — vacuum on the other side. A door leads into the corridor to the north.
-[Turn 2] +929 tokens (total: 1699)
+[Turn 2] +921 tokens (total: 1691)
   TOOL: go({'direction': 'north'})
   OUT:  You enter the Corridor.
 
 A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
-[Turn 3] +1000 tokens (total: 2699)
+[Turn 3] +997 tokens (total: 2688)
   TOOL: go({'direction': 'north'})
   OUT:  You enter the Bridge.
 
 The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
-[Turn 4] +1067 tokens (total: 3766)
-  TOOL: look({})
-  OUT:  The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
-[Turn 5] +1128 tokens (total: 4894)
+[Turn 4] +1067 tokens (total: 3755)
+  TOOL: inventory({})
+  OUT:  You aren't carrying anything.
+[Turn 5] +1096 tokens (total: 4851)
+  TOOL: go({'direction': 'east'})
+  OUT:  You can't go east. Exits: south.
+[Turn 6] +1161 tokens (total: 6012)
   TOOL: go({'direction': 'south'})
   OUT:  You enter the Corridor.
 
 A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
-[Turn 6] +1232 tokens (total: 6126)
+[Turn 7] +1209 tokens (total: 7221)
   TOOL: go({'direction': 'east'})
   OUT:  You enter the Engine Room.
 
 The engine room is pitch black. You can barely see anything. You hear the hum of dormant machinery. Near the entrance, you feel something on a shelf — it might be a flashli
-[Turn 7] +1318 tokens (total: 7444)
+[Turn 8] +1290 tokens (total: 8511)
   TOOL: take({'item': 'flashlight'})
   OUT:  You pick up the flashlight.
-[Turn 8] +1356 tokens (total: 8800)
+[Turn 9] +1366 tokens (total: 9877)
   TOOL: use({'item': 'flashlight'})
   OUT:  You switch on the flashlight. The beam cuts through the darkness. You can see the engine core now — and something glinting under a pile of debris near the wall. It looks like a keycard.
-[Turn 9] +1430 tokens (total: 10230)
+[Turn 10] +1392 tokens (total: 11269)
   TOOL: take({'item': 'keycard'})
   OUT:  You pick up the keycard.
-[Turn 10] +1468 tokens (total: 11698)
+[Turn 11] +1425 tokens (total: 12694)
   TOOL: go({'direction': 'west'})
   OUT:  You enter the Corridor.
 
 A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
-[Turn 11] +1549 tokens (total: 13247)
+[Turn 12] +1559 tokens (total: 14253)
   TOOL: go({'direction': 'north'})
   OUT:  You enter the Bridge.
 
 The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
-[Turn 12] +1626 tokens (total: 14873)
+[Turn 13] +1636 tokens (total: 15889)
   TOOL: use({'item': 'keycard'})
   OUT:  You slide the keycard into the console. Screens flicker to life. The station's distress beacon activates — a rescue signal pulses out into deep space.
 
 *** YOU WIN ***
-Completed in 13 moves.
+Completed in 14 moves.
 
   *** WIN ***
 
@@ -60,7 +63,7 @@ Completed in 13 moves.
   Mode:        mcp
   Won:         True
   Gave up:     False
-  Total tokens: 14873
-  Turns:       12
+  Total tokens: 15889
+  Turns:       13
   Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Llama_3.3_70B_mcp.log
-  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_meta-llama_llama-3.3-70b-instruct_mcp_20260226_142617.json
+  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_meta-llama_llama-3.3-70b-instruct_mcp_20260226_153511.json

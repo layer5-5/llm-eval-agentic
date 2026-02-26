@@ -1,0 +1,156 @@
+=== Eval: openrouter/anthropic/claude-sonnet-4.6 [bash] ===
+Token limit: 50000
+
+[Turn 1] +388 tokens (total: 388)
+  LLM: cat README
+  OUT: AIRLOCK - Space Station Epsilon
+
+You are in the station's airlock. Emergency lights pulse red.
+The outer hatch is sealed shut — vacuum on the other side.
+
+Exits:
+  north/ -> Corridor
+[Turn 2] +444 tokens (total: 832)
+  LLM: ls
+  OUT: north
+README
+[Turn 3] +455 tokens (total: 1287)
+  LLM: cd north
+  OUT: 
+[Turn 4] +467 tokens (total: 1754)
+  LLM: cat README
+  OUT: CORRIDOR - Space Station Epsilon
+
+A long metal corridor stretches before you. Sparks drip from
+damaged ceiling panels.
+
+Exits:
+  south/  -> Airlock
+  north/  -> Bridge
+  east/   -> Engine Room
+  west/
+[Turn 5] +538 tokens (total: 2292)
+  LLM: ls
+  OUT: east
+north
+README
+south
+west
+[Turn 6] +555 tokens (total: 2847)
+  LLM: cd north
+  OUT: 
+[Turn 7] +567 tokens (total: 3414)
+  LLM: cat README
+  OUT: BRIDGE - Space Station Epsilon
+
+The bridge is silent. A large console dominates the center of the room.
+Its screen is dark — it looks like it needs a keycard to activate.
+
+If you have the keycard, run
+[Turn 8] +645 tokens (total: 4059)
+  LLM: ls
+  OUT: README
+south
+use_keycard
+[Turn 9] +662 tokens (total: 4721)
+  LLM: ls ../inventory
+  OUT: README
+[Turn 10] +671 tokens (total: 5392)
+  LLM: cd south
+  OUT: 
+[Turn 11] +683 tokens (total: 6075)
+  LLM: cd west
+  OUT: 
+[Turn 12] +695 tokens (total: 6770)
+  LLM: cat README
+  OUT: MED BAY - Space Station Epsilon
+
+A small medical bay with overturned supply carts.
+A crew log sits on the counter — it might have useful information.
+
+Read it with: cat crew_log.txt
+
+Exits:
+  east/ ->
+[Turn 13] +761 tokens (total: 7531)
+  LLM: ls
+  OUT: crew_log.txt
+east
+README
+[Turn 14] +782 tokens (total: 8313)
+  LLM: cat crew_log.txt
+  OUT: CREW LOG - Day 247
+
+Power failure hit deck 3. Captain stashed the emergency keycard
+in the engine room before the lights went out.
+
+Grab a flashlight if you head in there — it's pitch black.
+The keyca
+[Turn 15] +855 tokens (total: 9168)
+  LLM: cd east
+  OUT: 
+[Turn 16] +867 tokens (total: 10035)
+  LLM: cd east
+  OUT: 
+[Turn 17] +878 tokens (total: 10913)
+  LLM: ls
+  OUT: flashlight
+README
+west
+[Turn 18] +892 tokens (total: 11805)
+  LLM: cat README
+  OUT: ENGINE ROOM - Space Station Epsilon
+
+The engine room is pitch black. You can barely see anything.
+You hear the hum of dormant machinery.
+
+Near the entrance, you feel something on a shelf — it might be
+[Turn 19] +970 tokens (total: 12775)
+  LLM: ./flashlight
+  OUT: You grab the flashlight from the shelf and switch it on.
+The beam cuts through the darkness.
+
+The light reveals a massive engine core surrounded by catwalks.
+Under a pile of debris near the wall, you 
+[Turn 20] +1046 tokens (total: 13821)
+  LLM: ./take_keycard
+  OUT: You pull the keycard from the debris. It has the captain's photo on it.
+The keycard is now in your inventory.
+[Turn 21] +1083 tokens (total: 14904)
+  LLM: ls ../inventory
+  OUT: flashlight
+keycard
+README
+[Turn 22] +1098 tokens (total: 16002)
+  LLM: cd west
+  OUT: 
+[Turn 23] +1110 tokens (total: 17112)
+  LLM: cd north
+  OUT: 
+[Turn 24] +1122 tokens (total: 18234)
+  LLM: cd north
+  OUT: bash: cd: north: No such file or directory
+[Turn 25] +1140 tokens (total: 19374)
+  LLM: ls
+  OUT: README
+south
+use_keycard
+[Turn 26] +1159 tokens (total: 20533)
+  LLM: ./use_keycard
+  OUT: You slide the keycard into the console. Screens flicker to life.
+The station's distress beacon activates — a rescue signal pulses
+out into deep space.
+
+*** YOU WIN ***
+
+  *** WIN ***
+
+=== Results ===
+  Model:       openrouter/anthropic/claude-sonnet-4.6
+  Mode:        bash
+  Won:         True
+  Gave up:     False
+  Total tokens: 20533
+  Turns:       26
+  Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Claude_sonnet_4.6_bash.log
+  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_anthropic_claude-sonnet-4.6_bash_20260226_153640.json

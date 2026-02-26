@@ -5,3 +5,5 @@ models:
     label: Llama 3.3 70B
   - name: openrouter/google/gemini-2.5-flash
     label: Gemini 2.5 Flash
+  - name: openrouter/anthropic/claude-sonnet-4.6
+    label: Claude sonnet 4.6

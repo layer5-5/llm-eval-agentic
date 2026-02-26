@@ -23,12 +23,25 @@ Exits:
   LLM: 
   [EMPTY COMMAND x2]
 [Turn 6] +599 tokens (total: 3205)
+  LLM: ls
+  OUT: east
+north
+README
+south
+west
+[Turn 7] +619 tokens (total: 3824)
+  LLM: 
+  [EMPTY COMMAND x1]
+[Turn 8] +641 tokens (total: 4465)
+  LLM: 
+  [EMPTY COMMAND x2]
+[Turn 9] +663 tokens (total: 5128)
   LLM: 
   [EMPTY COMMAND x3]
-[Turn 7] +621 tokens (total: 3826)
+[Turn 10] +685 tokens (total: 5813)
   LLM: 
   [EMPTY COMMAND x4]
-[Turn 8] +643 tokens (total: 4469)
+[Turn 11] +707 tokens (total: 6520)
   LLM: 
   [EMPTY COMMAND x5]
   [FORCE STOP: 5 consecutive empty commands]
@@ -38,7 +51,7 @@ Exits:
   Mode:        bash
   Won:         False
   Gave up:     False
-  Total tokens: 4469
-  Turns:       8
+  Total tokens: 6520
+  Turns:       11
   Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/GPT-OSS-120B_bash.log
-  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_openai_gpt-oss-120b_bash_20260226_142520.json
+  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_openai_gpt-oss-120b_bash_20260226_153431.json

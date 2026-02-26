@@ -77,32 +77,39 @@ Every run saves a timestamped JSON file in `eval/logs/`. These accumulate across
 
 ## Results
 
-Results after 2 runs per model (12 total runs, 10 wins):
+See the **[full dashboard](dashboard.md)** for detailed results and leaderboard.
+
+Results after 6 runs per model (38 total runs, 31 wins):
 
 ```
 Model                        Mode   Runs Wins  Win%  Avg Tok  Min Tok  Max Tok  Avg Turns
 -----------------------------------------------------------------------------------------
-gemini-2.5-flash             bash      2    2  100%    15856    11528    20184       24.0
-gemini-2.5-flash             mcp       2    2  100%    26278    14773    37784       23.0
+claude-sonnet-4.6            bash      1    1  100%    19370    19370    19370       25.0
+claude-sonnet-4.6            mcp       1    1  100%    42173    42173    42173       18.0
 
-gpt-oss-120b                 bash      2    0    0%     4469     4469     4469        8.0
-gpt-oss-120b                 mcp       2    2  100%    14863    13238    16488       13.5
+gemini-2.5-flash             bash      6    6  100%    12976    11528    20184       20.7
+gemini-2.5-flash             mcp       6    6  100%    21940    14773    37784       18.0
 
-llama-3.3-70b-instruct       bash      2    2  100%    15661    15661    15661       21.0
-llama-3.3-70b-instruct       mcp       2    2  100%    14884    14873    14896       12.0
+gpt-oss-120b                 bash      6    0    0%     5453     4469     8320        9.3
+gpt-oss-120b                 mcp       6    6  100%    24213    13238    32950       19.8
+
+llama-3.3-70b-instruct       bash      6    5   83%    15782    15642    16407       21.3
+llama-3.3-70b-instruct       mcp       6    6  100%    14815    14640    14918       12.0
 ```
 
 **Leaderboard** (avg tokens to win, lower is better):
 
 | Rank | Model | Mode | Avg Tokens | Wins |
 |------|-------|------|-----------|------|
-| 1 | gpt-oss-120b | mcp | 14,863 | 2 |
-| 2 | llama-3.3-70b-instruct | mcp | 14,884 | 2 |
-| 3 | llama-3.3-70b-instruct | bash | 15,661 | 2 |
-| 4 | gemini-2.5-flash | bash | 15,856 | 2 |
-| 5 | gemini-2.5-flash | mcp | 26,278 | 2 |
+| 1 | gemini-2.5-flash | bash | 12,976 | 6 |
+| 2 | llama-3.3-70b-instruct | mcp | 14,815 | 6 |
+| 3 | llama-3.3-70b-instruct | bash | 15,657 | 5 |
+| 4 | claude-sonnet-4.6 | bash | 19,370 | 1 |
+| 5 | gemini-2.5-flash | mcp | 21,940 | 6 |
+| 6 | gpt-oss-120b | mcp | 24,213 | 6 |
+| 7 | claude-sonnet-4.6 | mcp | 42,173 | 1 |
 
-Notable: GPT-OSS-120B consistently fails bash mode (emits garbled commands then empty responses) but performs well with MCP tools. Gemini 2.5 Flash shows high variance — efficient in some runs, very chatty in MCP mode in others.
+Notable: GPT-OSS-120B consistently fails bash mode (emits garbled commands then empty responses) but performs well with MCP tools. Claude Sonnet 4.6 won both modes in its single run but used significantly more tokens in MCP mode. Gemini 2.5 Flash shows high variance — efficient in some runs, very chatty in MCP mode in others.
 
 ## Project Structure
 

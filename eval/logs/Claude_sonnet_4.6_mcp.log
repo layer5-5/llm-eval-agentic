@@ -1,0 +1,104 @@
+=== Eval: openrouter/anthropic/claude-sonnet-4.6 [mcp] ===
+Token limit: 50000
+
+[Turn 1] +1193 tokens (total: 1193)
+  TOOL: look({})
+  OUT:  You are in the station's airlock. Emergency lights pulse red. The outer hatch is sealed shut — vacuum on the other side. A door leads into the corridor to the north.
+  TOOL: inventory({})
+  OUT:  You aren't carrying anything.
+[Turn 2] +1386 tokens (total: 2579)
+  TOOL: go({'direction': 'north'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 3] +1554 tokens (total: 4133)
+  TOOL: look({})
+  OUT:  A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is to the south.
+[Turn 4] +1700 tokens (total: 5833)
+  TOOL: go({'direction': 'west'})
+  OUT:  You enter the Med Bay.
+
+A small medical bay with overturned supply carts. A crew log sits on the counter — it might have useful information. The corridor is to the east.
+[Turn 5] +1839 tokens (total: 7672)
+  TOOL: look({})
+  OUT:  A small medical bay with overturned supply carts. A crew log sits on the counter — it might have useful information. The corridor is to the east.
+  TOOL: take({'item': 'crew log'})
+  OUT:  You pick up the crew log.
+[Turn 6] +2007 tokens (total: 9679)
+  TOOL: read({'item': 'crew log'})
+  OUT:  You read the crew log:
+
+CREW LOG - Day 247: Power failure hit deck 3. Captain stashed the emergency keycard in the engine room before the lights went out. Grab a flashlight if you head in there — it's
+[Turn 7] +2213 tokens (total: 11892)
+  TOOL: go({'direction': 'east'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 8] +2363 tokens (total: 14255)
+  TOOL: go({'direction': 'north'})
+  OUT:  You enter the Bridge.
+
+The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 9] +2453 tokens (total: 16708)
+  TOOL: look({})
+  OUT:  The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 10] +2600 tokens (total: 19308)
+  TOOL: go({'direction': 'south'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 11] +2716 tokens (total: 22024)
+  TOOL: go({'direction': 'south'})
+  OUT:  You enter the Airlock.
+
+You are in the station's airlock. Emergency lights pulse red. The outer hatch is sealed shut — vacuum on the other side. A door leads into the corridor to the north.
+[Turn 12] +2807 tokens (total: 24831)
+  TOOL: look({})
+  OUT:  You are in the station's airlock. Emergency lights pulse red. The outer hatch is sealed shut — vacuum on the other side. A door leads into the corridor to the north.
+[Turn 13] +2943 tokens (total: 27774)
+  TOOL: go({'direction': 'north'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 14] +3059 tokens (total: 30833)
+  TOOL: go({'direction': 'east'})
+  OUT:  You enter the Engine Room.
+
+The engine room is pitch black. You can barely see anything. You hear the hum of dormant machinery. Near the entrance, you feel something on a shelf — it might be a flashli
+[Turn 15] +3201 tokens (total: 34034)
+  TOOL: take({'item': 'flashlight'})
+  OUT:  You pick up the flashlight.
+[Turn 16] +3294 tokens (total: 37328)
+  TOOL: use({'item': 'flashlight'})
+  OUT:  You switch on the flashlight. The beam cuts through the darkness. You can see the engine core now — and something glinting under a pile of debris near the wall. It looks like a keycard.
+[Turn 17] +3419 tokens (total: 40747)
+  TOOL: take({'item': 'keycard'})
+  OUT:  You pick up the keycard.
+[Turn 18] +3518 tokens (total: 44265)
+  TOOL: go({'direction': 'west'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 19] +3634 tokens (total: 47899)
+  TOOL: go({'direction': 'north'})
+  OUT:  You enter the Bridge.
+
+The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 20] +3767 tokens (total: 51666)
+  TOOL: use({'item': 'keycard'})
+  OUT:  You slide the keycard into the console. Screens flicker to life. The station's distress beacon activates — a rescue signal pulses out into deep space.
+
+*** YOU WIN ***
+Completed in 23 moves.
+
+  *** WIN ***
+
+=== Results ===
+  Model:       openrouter/anthropic/claude-sonnet-4.6
+  Mode:        mcp
+  Won:         True
+  Gave up:     False
+  Total tokens: 51666
+  Turns:       20
+  Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Claude_sonnet_4.6_mcp.log
+  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_anthropic_claude-sonnet-4.6_mcp_20260226_153721.json

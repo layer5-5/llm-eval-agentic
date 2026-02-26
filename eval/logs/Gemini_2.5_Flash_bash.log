@@ -37,76 +37,9 @@ README
 south
 west
 [Turn 6] +491 tokens (total: 2571)
-  LLM: cd north
+  LLM: cd east
   OUT: 
 [Turn 7] +497 tokens (total: 3068)
-  LLM: cat README
-  OUT: BRIDGE - Space Station Epsilon
-
-The bridge is silent. A large console dominates the center of the room.
-Its screen is dark — it looks like it needs a keycard to activate.
-
-If you have the keycard, run
-[Turn 8] +566 tokens (total: 3634)
-  LLM: ls
-  OUT: README
-south
-use_keycard
-[Turn 9] +577 tokens (total: 4211)
-  LLM: ls ../inventory
-  OUT: README
-[Turn 10] +580 tokens (total: 4791)
-  LLM: cd south
-  OUT: 
-[Turn 11] +585 tokens (total: 5376)
-  LLM: ls
-  OUT: east
-north
-README
-south
-west
-[Turn 12] +596 tokens (total: 5972)
-  LLM: cd west
-  OUT: 
-[Turn 13] +602 tokens (total: 6574)
-  LLM: cat README
-  OUT: MED BAY - Space Station Epsilon
-
-A small medical bay with overturned supply carts.
-A crew log sits on the counter — it might have useful information.
-
-Read it with: cat crew_log.txt
-
-Exits:
-  east/ ->
-[Turn 14] +656 tokens (total: 7230)
-  LLM: ls
-  OUT: crew_log.txt
-east
-README
-[Turn 15] +671 tokens (total: 7901)
-  LLM: cat crew_log.txt
-  OUT: CREW LOG - Day 247
-
-Power failure hit deck 3. Captain stashed the emergency keycard
-in the engine room before the lights went out.
-
-Grab a flashlight if you head in there — it's pitch black.
-The keyca
-[Turn 16] +739 tokens (total: 8640)
-  LLM: cd east
-  OUT: 
-[Turn 17] +744 tokens (total: 9384)
-  LLM: ls
-  OUT: east
-north
-README
-south
-west
-[Turn 18] +755 tokens (total: 10139)
-  LLM: cd east
-  OUT: 
-[Turn 19] +799 tokens (total: 10938)
   LLM: cat README
   OUT: ENGINE ROOM - Space Station Epsilon
 
@@ -114,52 +47,72 @@ The engine room is pitch black. You can barely see anything.
 You hear the hum of dormant machinery.
 
 Near the entrance, you feel something on a shelf — it might be
-[Turn 20] +825 tokens (total: 11763)
+[Turn 8] +561 tokens (total: 3629)
   LLM: ls
   OUT: flashlight
 README
 west
-[Turn 21] +832 tokens (total: 12595)
+[Turn 9] +568 tokens (total: 4197)
   LLM: ./flashlight
   OUT: You grab the flashlight from the shelf and switch it on.
 The beam cuts through the darkness.
 
 The light reveals a massive engine core surrounded by catwalks.
 Under a pile of debris near the wall, you 
-[Turn 22] +897 tokens (total: 13492)
+[Turn 10] +633 tokens (total: 4830)
   LLM: ls
   OUT: flashlight
 README
 take_keycard
 west
-[Turn 23] +912 tokens (total: 14404)
+[Turn 11] +648 tokens (total: 5478)
   LLM: ./take_keycard
   OUT: You pull the keycard from the debris. It has the captain's photo on it.
 The keycard is now in your inventory.
-[Turn 24] +944 tokens (total: 15348)
+[Turn 12] +680 tokens (total: 6158)
   LLM: ls ../inventory
   OUT: flashlight
 keycard
 README
-[Turn 25] +952 tokens (total: 16300)
+[Turn 13] +688 tokens (total: 6846)
   LLM: cd west
   OUT: 
-[Turn 26] +957 tokens (total: 17257)
+[Turn 14] +694 tokens (total: 7540)
+  LLM: cat README
+  OUT: CORRIDOR - Space Station Epsilon
+
+A long metal corridor stretches before you. Sparks drip from
+damaged ceiling panels.
+
+Exits:
+  south/  -> Airlock
+  north/  -> Bridge
+  east/   -> Engine Room
+  west/
+[Turn 15] +755 tokens (total: 8295)
   LLM: ls
   OUT: east
 north
 README
 south
 west
-[Turn 27] +968 tokens (total: 18225)
+[Turn 16] +766 tokens (total: 9061)
   LLM: cd north
   OUT: 
-[Turn 28] +973 tokens (total: 19198)
+[Turn 17] +772 tokens (total: 9833)
+  LLM: cat README
+  OUT: BRIDGE - Space Station Epsilon
+
+The bridge is silent. A large console dominates the center of the room.
+Its screen is dark — it looks like it needs a keycard to activate.
+
+If you have the keycard, run
+[Turn 18] +841 tokens (total: 10674)
   LLM: ls
   OUT: README
 south
 use_keycard
-[Turn 29] +986 tokens (total: 20184)
+[Turn 19] +854 tokens (total: 11528)
   LLM: ./use_keycard
   OUT: You slide the keycard into the console. Screens flicker to life.
 The station's distress beacon activates — a rescue signal pulses
@@ -174,7 +127,7 @@ out into deep space.
   Mode:        bash
   Won:         True
   Gave up:     False
-  Total tokens: 20184
-  Turns:       29
+  Total tokens: 11528
+  Turns:       19
   Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Gemini_2.5_Flash_bash.log
-  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_google_gemini-2.5-flash_bash_20260226_142652.json
+  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_google_gemini-2.5-flash_bash_20260226_153537.json
