@@ -4,59 +4,120 @@ Token limit: 50000
 [Turn 1] +350 tokens (total: 350)
   TOOL: look({})
   OUT:  You are in the station's airlock. Emergency lights pulse red. The outer hatch is sealed shut — vacuum on the other side. A door leads into the corridor to the north.
-[Turn 2] +428 tokens (total: 778)
+[Turn 2] +448 tokens (total: 798)
+  LLM: You are in the station's airlock. Emergency lights pulse red. The outer hatch is sealed shut — vacuum on the other side. A door leads into the corridor to the north.
+[Turn 3] +460 tokens (total: 1258)
   TOOL: go({'direction': 'north'})
   OUT:  You enter the Corridor.
 
 A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
-[Turn 3] +556 tokens (total: 1334)
-  TOOL: go({'direction': 'west'})
-  OUT:  You enter the Med Bay.
+[Turn 4] +575 tokens (total: 1833)
+  LLM: You enter the Corridor.
 
-A small medical bay with overturned supply carts. A crew log sits on the counter — it might have useful information. The corridor is to the east.
-[Turn 4] +638 tokens (total: 1972)
-  TOOL: take({'item': 'crew log'})
-  OUT:  You pick up the crew log.
-[Turn 5] +681 tokens (total: 2653)
-  TOOL: read({'item': 'crew log'})
-  OUT:  You read the crew log:
-
-CREW LOG - Day 247: Power failure hit deck 3. Captain stashed the emergency keycard in the engine room before the lights went out. Grab a flashlight if you head in there — it's
-[Turn 6] +807 tokens (total: 3460)
-  TOOL: go({'direction': 'east'})
-  OUT:  You enter the Corridor.
-
-A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
-[Turn 7] +896 tokens (total: 4356)
-  TOOL: go({'direction': 'east'})
-  OUT:  You enter the Engine Room.
-
-The engine room is pitch black. You can barely see anything. You hear the hum of dormant machinery. Near the entrance, you feel something on a shelf — it might be a flashli
-[Turn 8] +993 tokens (total: 5349)
-  TOOL: take({'item': 'flashlight'})
-  OUT:  You pick up the flashlight.
-[Turn 9] +1033 tokens (total: 6382)
-  TOOL: use({'item': 'flashlight'})
-  OUT:  You switch on the flashlight. The beam cuts through the darkness. You can see the engine core now — and something glinting under a pile of debris near the wall. It looks like a keycard.
-[Turn 10] +1123 tokens (total: 7505)
-  TOOL: take({'item': 'keycard'})
-  OUT:  You pick up the keycard.
-[Turn 11] +1177 tokens (total: 8682)
-  TOOL: go({'direction': 'west'})
-  OUT:  You enter the Corridor.
-
-A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
-[Turn 12] +1265 tokens (total: 9947)
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is to the south.
+[Turn 5] +588 tokens (total: 2421)
   TOOL: go({'direction': 'north'})
   OUT:  You enter the Bridge.
 
 The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
-[Turn 13] +1360 tokens (total: 11307)
+[Turn 6] +693 tokens (total: 3114)
+  LLM: You enter the Bridge.
+
+The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 7] +915 tokens (total: 4029)
+  TOOL: look({})
+  OUT:  The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 8] +800 tokens (total: 4829)
+  LLM: The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 9] +813 tokens (total: 5642)
+  TOOL: go({'direction': 'south'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 10] +926 tokens (total: 6568)
+  LLM: You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is to the south.
+[Turn 11] +939 tokens (total: 7507)
+  TOOL: go({'direction': 'west'})
+  OUT:  You enter the Med Bay.
+
+A small medical bay with overturned supply carts. A crew log sits on the counter — it might have useful information. The corridor is to the east.
+[Turn 12] +1032 tokens (total: 8539)
+  LLM: You enter the Med Bay.
+
+A small medical bay with overturned supply carts. A crew log sits on the counter — it might have useful information. The corridor is to the east.
+[Turn 13] +1046 tokens (total: 9585)
+  TOOL: take({'item': 'crew log'})
+  OUT:  You pick up the crew log.
+[Turn 14] +1077 tokens (total: 10662)
+  LLM: You pick up the crew log.
+[Turn 15] +1091 tokens (total: 11753)
+  TOOL: read({'item': 'crew log'})
+  OUT:  You read the crew log:
+
+CREW LOG - Day 247: Power failure hit deck 3. Captain stashed the emergency keycard in the engine room before the lights went out. Grab a flashlight if you head in there — it's
+[Turn 16] +1221 tokens (total: 12974)
+  LLM: You read the crew log:
+
+CREW LOG - Day 247: Power failure hit deck 3. Captain stashed the emergency keycard in the engine room before the lights went out. Grab a flashlight if you head in there — it's pitch black.
+[Turn 17] +1234 tokens (total: 14208)
+  TOOL: go({'direction': 'east'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 18] +1351 tokens (total: 15559)
+  LLM: You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is to the south.
+[Turn 19] +1364 tokens (total: 16923)
+  TOOL: go({'direction': 'east'})
+  OUT:  You enter the Engine Room.
+
+The engine room is pitch black. You can barely see anything. You hear the hum of dormant machinery. Near the entrance, you feel something on a shelf — it might be a flashli
+[Turn 20] +1489 tokens (total: 18412)
+  LLM: You enter the Engine Room.
+
+The engine room is pitch black. You can barely see anything. You hear the hum of dormant machinery. Near the entrance, you feel something on a shelf — it might be a flashlight. The corridor is back to the west.
+[Turn 21] +1502 tokens (total: 19914)
+  TOOL: take({'item': 'flashlight'})
+  OUT:  You pick up the flashlight.
+[Turn 22] +1535 tokens (total: 21449)
+  LLM: You pick up the flashlight.
+[Turn 23] +1548 tokens (total: 22997)
+  TOOL: use({'item': 'flashlight'})
+  OUT:  You switch on the flashlight. The beam cuts through the darkness. You can see the engine core now — and something glinting under a pile of debris near the wall. It looks like a keycard.
+[Turn 24] +1650 tokens (total: 24647)
+  LLM: You switch on the flashlight. The beam cuts through the darkness. You can see the engine core now — and something glinting under a pile of debris near the wall. It looks like a keycard.
+[Turn 25] +1664 tokens (total: 26311)
+  TOOL: take({'item': 'keycard'})
+  OUT:  You pick up the keycard.
+[Turn 26] +1699 tokens (total: 28010)
+  LLM: You pick up the keycard.
+[Turn 27] +1712 tokens (total: 29722)
+  TOOL: go({'direction': 'west'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 28] +1828 tokens (total: 31550)
+  LLM: You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is to the south.
+[Turn 29] +1841 tokens (total: 33391)
+  TOOL: go({'direction': 'north'})
+  OUT:  You enter the Bridge.
+
+The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 30] +1948 tokens (total: 35339)
+  LLM: You enter the Bridge.
+
+The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 31] +2445 tokens (total: 37784)
   TOOL: use({'item': 'keycard'})
   OUT:  You slide the keycard into the console. Screens flicker to life. The station's distress beacon activates — a rescue signal pulses out into deep space.
 
 *** YOU WIN ***
-Completed in 14 moves.
+Completed in 17 moves.
 
   *** WIN ***
 
@@ -65,6 +126,7 @@ Completed in 14 moves.
   Mode:        mcp
   Won:         True
   Gave up:     False
-  Total tokens: 11307
-  Turns:       13
+  Total tokens: 37784
+  Turns:       31
   Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Gemini_2.5_Flash_mcp.log
+  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_google_gemini-2.5-flash_mcp_20260226_142729.json

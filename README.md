@@ -75,6 +75,35 @@ Fail conditions:
 
 Every run saves a timestamped JSON file in `eval/logs/`. These accumulate across runs — the report aggregates all of them to compute win rates, token averages, and a leaderboard.
 
+## Results
+
+Results after 2 runs per model (12 total runs, 10 wins):
+
+```
+Model                        Mode   Runs Wins  Win%  Avg Tok  Min Tok  Max Tok  Avg Turns
+-----------------------------------------------------------------------------------------
+gemini-2.5-flash             bash      2    2  100%    15856    11528    20184       24.0
+gemini-2.5-flash             mcp       2    2  100%    26278    14773    37784       23.0
+
+gpt-oss-120b                 bash      2    0    0%     4469     4469     4469        8.0
+gpt-oss-120b                 mcp       2    2  100%    14863    13238    16488       13.5
+
+llama-3.3-70b-instruct       bash      2    2  100%    15661    15661    15661       21.0
+llama-3.3-70b-instruct       mcp       2    2  100%    14884    14873    14896       12.0
+```
+
+**Leaderboard** (avg tokens to win, lower is better):
+
+| Rank | Model | Mode | Avg Tokens | Wins |
+|------|-------|------|-----------|------|
+| 1 | gpt-oss-120b | mcp | 14,863 | 2 |
+| 2 | llama-3.3-70b-instruct | mcp | 14,884 | 2 |
+| 3 | llama-3.3-70b-instruct | bash | 15,661 | 2 |
+| 4 | gemini-2.5-flash | bash | 15,856 | 2 |
+| 5 | gemini-2.5-flash | mcp | 26,278 | 2 |
+
+Notable: GPT-OSS-120B consistently fails bash mode (emits garbled commands then empty responses) but performs well with MCP tools. Gemini 2.5 Flash shows high variance — efficient in some runs, very chatty in MCP mode in others.
+
 ## Project Structure
 
 ```

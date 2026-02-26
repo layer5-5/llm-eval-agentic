@@ -19,64 +19,16 @@ Exits:
 [Turn 4] +555 tokens (total: 2029)
   LLM: 
   [EMPTY COMMAND x1]
-[Turn 5] +573 tokens (total: 2602)
-  LLM: ls
-  OUT: east
-north
-README
-south
-west
-[Turn 6] +597 tokens (total: 3199)
-  LLM: cat README
-  OUT: CORRIDOR - Space Station Epsilon
-
-A long metal corridor stretches before you. Sparks drip from
-damaged ceiling panels.
-
-Exits:
-  south/  -> Airlock
-  north/  -> Bridge
-  east/   -> Engine Room
-  west/
-[Turn 7] +668 tokens (total: 3867)
-  LLM: cd north
-  OUT: 
-[Turn 8] +683 tokens (total: 4550)
-  LLM: cat READMEls<|message|><|start|>assistant<|channel|>analysis<|message|>
-  OUT: cat: READMEls: No such file or directory
-[Turn 9] +727 tokens (total: 5277)
-  LLM: 
-  [EMPTY COMMAND x1]
-[Turn 10] +749 tokens (total: 6026)
+[Turn 5] +577 tokens (total: 2606)
   LLM: 
   [EMPTY COMMAND x2]
-[Turn 11] +763 tokens (total: 6789)
-  LLM: cat README
-  OUT: BRIDGE - Space Station Epsilon
-
-The bridge is silent. A large console dominates the center of the room.
-Its screen is dark — it looks like it needs a keycard to activate.
-
-If you have the keycard, run
-[Turn 12] +847 tokens (total: 7636)
-  LLM: 
-  [EMPTY COMMAND x1]
-[Turn 13] +869 tokens (total: 8505)
-  LLM: ls ../inventory
-  OUT: README
-[Turn 14] +883 tokens (total: 9388)
-  LLM: 
-  [EMPTY COMMAND x1]
-[Turn 15] +905 tokens (total: 10293)
-  LLM: 
-  [EMPTY COMMAND x2]
-[Turn 16] +927 tokens (total: 11220)
+[Turn 6] +599 tokens (total: 3205)
   LLM: 
   [EMPTY COMMAND x3]
-[Turn 17] +949 tokens (total: 12169)
+[Turn 7] +621 tokens (total: 3826)
   LLM: 
   [EMPTY COMMAND x4]
-[Turn 18] +971 tokens (total: 13140)
+[Turn 8] +643 tokens (total: 4469)
   LLM: 
   [EMPTY COMMAND x5]
   [FORCE STOP: 5 consecutive empty commands]
@@ -86,6 +38,7 @@ If you have the keycard, run
   Mode:        bash
   Won:         False
   Gave up:     False
-  Total tokens: 13140
-  Turns:       18
+  Total tokens: 4469
+  Turns:       8
   Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/GPT-OSS-120B_bash.log
+  JSON:        /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/openrouter_openai_gpt-oss-120b_bash_20260226_142520.json
