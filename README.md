@@ -32,6 +32,9 @@ A space station text adventure. The LLM wakes up in an airlock and must find a w
 # Run against all models in models.yaml
 .tools/run-all.sh
 
+# Generate aggregate report from all runs
+.tools/report.sh
+
 # Reset the adventure state
 .tools/reset.sh
 
@@ -70,7 +73,7 @@ Fail conditions:
 - Model outputs `GIVE_UP`
 - 5 consecutive empty/invalid commands
 
-Full conversation logs are saved as JSON in `eval/logs/`.
+Every run saves a timestamped JSON file in `eval/logs/`. These accumulate across runs — the report aggregates all of them to compute win rates, token averages, and a leaderboard.
 
 ## Project Structure
 
@@ -86,7 +89,8 @@ game_logic/         Shared game engine (Python)
   world.py          Room/item/puzzle definitions
 eval/               Evaluation harness
   harness.py        Main eval loop (model <-> bash shell)
+  report.py         Aggregate report generator
   bash_runner.py    Subprocess-based bash command runner
-  logs/             JSON logs from eval runs
+  logs/             Timestamped JSON logs from every run
 models.yaml         Models to evaluate
 ```

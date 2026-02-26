@@ -182,7 +182,7 @@ def run_bash_eval(model: str, station_dir: str, token_limit: int, log: Logger) -
 
     return _finish(log, model=model, mode="bash", won=won, gave_up=gave_up,
                    prompt_tokens=total_prompt_tokens, completion_tokens=total_completion_tokens,
-                   turns=turns, commands=commands)
+                   turns=turns, commands=commands, messages=messages)
 
 
 def run_mcp_eval(model: str, token_limit: int, log: Logger) -> dict:
@@ -288,11 +288,12 @@ def run_mcp_eval(model: str, token_limit: int, log: Logger) -> dict:
 
     return _finish(log, model=model, mode="mcp", won=won, gave_up=gave_up,
                    prompt_tokens=total_prompt_tokens, completion_tokens=total_completion_tokens,
-                   turns=turns, commands=tool_calls_log)
+                   turns=turns, commands=tool_calls_log, messages=messages)
 
 
-def _finish(log: Logger, *, model, mode, won, gave_up, prompt_tokens, completion_tokens, turns, commands) -> dict:
+def _finish(log: Logger, *, model, mode, won, gave_up, prompt_tokens, completion_tokens, turns, commands, messages) -> dict:
     total_tokens = prompt_tokens + completion_tokens
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     log.log()
     log.log("=== Results ===")
@@ -304,7 +305,7 @@ def _finish(log: Logger, *, model, mode, won, gave_up, prompt_tokens, completion
     log.log(f"  Turns:       {turns}")
     log.log(f"  Log:         {log.path}")
 
-    return {
+    result = {
         "model": model,
         "mode": mode,
         "won": won,
@@ -316,6 +317,18 @@ def _finish(log: Logger, *, model, mode, won, gave_up, prompt_tokens, completion
         "commands": commands,
         "timestamp": datetime.now().isoformat(),
     }
+
+    # Save JSON log with timestamp so every run is preserved
+    log_dir = os.path.dirname(log.path)
+    safe_model = model.replace("/", "_")
+    json_path = os.path.join(log_dir, f"{safe_model}_{mode}_{timestamp}.json")
+    # Save result + full conversation for replay/debugging
+    json_data = {**result, "conversation": messages}
+    with open(json_path, "w") as f:
+        json.dump(json_data, f, indent=2, default=str)
+    log.log(f"  JSON:        {json_path}")
+
+    return result
 
 
 def _print_comparison(results: list[dict]):
@@ -382,11 +395,13 @@ def main():
             os.system(f"bash {reset_script}")
         blog = Logger(args.log_dir, label, "bash")
         bash_result = run_bash_eval(model_name, args.station_dir, args.token_limit, blog)
+        bash_result["label"] = label
         blog.close()
 
         # mcp
         mlog = Logger(args.log_dir, label, "mcp")
         mcp_result = run_mcp_eval(model_name, args.token_limit, mlog)
+        mcp_result["label"] = label
         mlog.close()
 
         return [bash_result, mcp_result]
