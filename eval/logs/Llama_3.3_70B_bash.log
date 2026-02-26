@@ -1,0 +1,143 @@
+=== Eval: openrouter/meta-llama/llama-3.3-70b-instruct [bash] ===
+Token limit: 50000
+
+[Turn 1] +378 tokens (total: 378)
+  LLM: cat README
+  OUT: AIRLOCK - Space Station Epsilon
+
+You are in the station's airlock. Emergency lights pulse red.
+The outer hatch is sealed shut — vacuum on the other side.
+
+Exits:
+  north/ -> Corridor
+[Turn 2] +433 tokens (total: 811)
+  LLM: ls
+  OUT: north
+README
+[Turn 3] +448 tokens (total: 1259)
+  LLM: cd north
+  OUT: 
+[Turn 4] +463 tokens (total: 1722)
+  LLM: cat README
+  OUT: CORRIDOR - Space Station Epsilon
+
+A long metal corridor stretches before you. Sparks drip from
+damaged ceiling panels.
+
+Exits:
+  south/  -> Airlock
+  north/  -> Bridge
+  east/   -> Engine Room
+  west/
+[Turn 5] +533 tokens (total: 2255)
+  LLM: ls
+  OUT: east
+north
+README
+south
+west
+[Turn 6] +554 tokens (total: 2809)
+  LLM: cd north
+  OUT: 
+[Turn 7] +569 tokens (total: 3378)
+  LLM: cat README
+  OUT: BRIDGE - Space Station Epsilon
+
+The bridge is silent. A large console dominates the center of the room.
+Its screen is dark — it looks like it needs a keycard to activate.
+
+If you have the keycard, run
+[Turn 8] +645 tokens (total: 4023)
+  LLM: ls
+  OUT: README
+south
+use_keycard
+[Turn 9] +665 tokens (total: 4688)
+  LLM: ls ../inventory
+  OUT: README
+[Turn 10] +678 tokens (total: 5366)
+  LLM: cd south
+  OUT: 
+[Turn 11] +693 tokens (total: 6059)
+  LLM: cat README
+  OUT: CORRIDOR - Space Station Epsilon
+
+A long metal corridor stretches before you. Sparks drip from
+damaged ceiling panels.
+
+Exits:
+  south/  -> Airlock
+  north/  -> Bridge
+  east/   -> Engine Room
+  west/
+[Turn 12] +764 tokens (total: 6823)
+  LLM: cd east
+  OUT: 
+[Turn 13] +779 tokens (total: 7602)
+  LLM: cat README
+  OUT: ENGINE ROOM - Space Station Epsilon
+
+The engine room is pitch black. You can barely see anything.
+You hear the hum of dormant machinery.
+
+Near the entrance, you feel something on a shelf — it might be
+[Turn 14] +853 tokens (total: 8455)
+  LLM: ./flashlight
+  OUT: You grab the flashlight from the shelf and switch it on.
+The beam cuts through the darkness.
+
+The light reveals a massive engine core surrounded by catwalks.
+Under a pile of debris near the wall, you 
+[Turn 15] +927 tokens (total: 9382)
+  LLM: ./take_keycard
+  OUT: You pull the keycard from the debris. It has the captain's photo on it.
+The keycard is now in your inventory.
+[Turn 16] +967 tokens (total: 10349)
+  LLM: ls ../inventory
+  OUT: flashlight
+keycard
+README
+[Turn 17] +986 tokens (total: 11335)
+  LLM: cd west
+  OUT: 
+[Turn 18] +1001 tokens (total: 12336)
+  LLM: cat README
+  OUT: CORRIDOR - Space Station Epsilon
+
+A long metal corridor stretches before you. Sparks drip from
+damaged ceiling panels.
+
+Exits:
+  south/  -> Airlock
+  north/  -> Bridge
+  east/   -> Engine Room
+  west/
+[Turn 19] +1072 tokens (total: 13408)
+  LLM: cd north
+  OUT: 
+[Turn 20] +1087 tokens (total: 14495)
+  LLM: cat README
+  OUT: BRIDGE - Space Station Epsilon
+
+The bridge is silent. A large console dominates the center of the room.
+Its screen is dark — it looks like it needs a keycard to activate.
+
+If you have the keycard, run
+[Turn 21] +1166 tokens (total: 15661)
+  LLM: ./use_keycard
+  OUT: You slide the keycard into the console. Screens flicker to life.
+The station's distress beacon activates — a rescue signal pulses
+out into deep space.
+
+*** YOU WIN ***
+
+  *** WIN ***
+
+=== Results ===
+  Model:       openrouter/meta-llama/llama-3.3-70b-instruct
+  Mode:        bash
+  Won:         True
+  Gave up:     False
+  Total tokens: 15661
+  Turns:       21
+  Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Llama_3.3_70B_bash.log

@@ -1,0 +1,91 @@
+{
+  "model": "openrouter/openai/gpt-oss-120b",
+  "mode": "bash",
+  "won": false,
+  "gave_up": false,
+  "total_tokens": 4469,
+  "prompt_tokens": 4106,
+  "completion_tokens": 363,
+  "turns": 8,
+  "commands": [
+    "cat README",
+    "cd north",
+    "cat READMEls",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "timestamp": "2026-02-25T17:28:48.234818",
+  "conversation": [
+    {
+      "role": "system",
+      "content": "You are playing a text adventure game on a damaged space station.\nYour goal: activate the bridge console to send a distress signal.\n\nYou explore by running bash commands. The world is made of directories and files:\n- Rooms are directories. Exits are subdirectories (e.g. north/, south/).\n- `cat README` describes the current room.\n- `ls` shows exits, items, and scripts in the room.\n- `cd north` moves you north. `cd south` moves you back. One cd per turn.\n- `./<script>` interacts with items (e.g. ./flashlight).\n- `ls ../inventory` shows items you have picked up.\n\nRULES:\n- Output EXACTLY ONE bash command per turn.\n- Do NOT combine commands. Do NOT chain commands.\n- Do NOT add any explanation, commentary, or markdown.\n- Do NOT output anything except the single command.\n\nGOOD examples:\ncat README\nls\ncd north\n./flashlight\n\nBAD examples (DO NOT DO THIS):\ncd north && cat README\ncd northcat README\ncd north; ls\n\nIf you are stuck, respond with: GIVE_UP\n"
+    },
+    {
+      "role": "user",
+      "content": "Game started. You are in the airlock.\n\n=== SPACE STATION EPSILON ===\n\nYou wake up on the cold floor of an airlock. Alarms blare.\nYou need to find a way to activate the bridge console and\nsend a distress signal.\n\nNavigate with: cd, ls, cat README\nInteract with: run executable scripts (e.g., ./flashlight)\nCheck inventory: ls ../inventory (from any room)\n\nYou are in: airlock/\nStart by reading the README, then explore.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "cat README"
+    },
+    {
+      "role": "user",
+      "content": "AIRLOCK - Space Station Epsilon\n\nYou are in the station's airlock. Emergency lights pulse red.\nThe outer hatch is sealed shut \u2014 vacuum on the other side.\n\nExits:\n  north/ -> Corridor"
+    },
+    {
+      "role": "assistant",
+      "content": "cd north"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "cat READMEls"
+    },
+    {
+      "role": "user",
+      "content": "cat: READMEls: No such file or directory"
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "Invalid command. Send exactly one bash command, nothing else."
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "Invalid command. Send exactly one bash command, nothing else."
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "Invalid command. Send exactly one bash command, nothing else."
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "Invalid command. Send exactly one bash command, nothing else."
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    }
+  ]
+}

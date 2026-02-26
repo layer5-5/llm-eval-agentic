@@ -1,0 +1,12 @@
+=== SPACE STATION EPSILON ===
+
+You wake up on the cold floor of an airlock. Alarms blare.
+You need to find a way to activate the bridge console and
+send a distress signal.
+
+Navigate with: cd, ls, cat README
+Interact with: run executable scripts (e.g., ./flashlight)
+Check inventory: ls ../inventory (from any room)
+
+You are in: airlock/
+Start by reading the README, then explore.

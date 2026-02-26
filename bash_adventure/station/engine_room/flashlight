@@ -1,0 +1,65 @@
+#!/bin/bash
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+STATION_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+ENGINE="$SCRIPT_DIR"
+
+# Check if already used
+if [ -f "$STATION_DIR/inventory/flashlight" ]; then
+    echo "You already have the flashlight. It's on."
+    exit 0
+fi
+
+echo "You grab the flashlight from the shelf and switch it on."
+echo "The beam cuts through the darkness."
+echo ""
+echo "The light reveals a massive engine core surrounded by catwalks."
+echo "Under a pile of debris near the wall, you spot a glinting keycard."
+echo ""
+echo "A new script has appeared: ./take_keycard"
+
+# Mark flashlight as taken
+touch "$STATION_DIR/inventory/flashlight"
+
+# Update the room README
+cat > "$ENGINE/README" << 'ROOM'
+ENGINE ROOM - Space Station Epsilon
+
+The flashlight illuminates a massive engine core surrounded by catwalks.
+Under a pile of debris near the wall, you can see a keycard.
+
+Pick it up with: ./take_keycard
+
+Exits:
+  west/ -> Corridor
+ROOM
+
+# Create the take_keycard script
+cat > "$ENGINE/take_keycard" << 'SCRIPT'
+#!/bin/bash
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+STATION_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+ENGINE="$SCRIPT_DIR"
+
+if [ -f "$STATION_DIR/inventory/keycard" ]; then
+    echo "You already have the keycard."
+    exit 0
+fi
+
+echo "You pull the keycard from the debris. It has the captain's photo on it."
+echo "The keycard is now in your inventory."
+
+touch "$STATION_DIR/inventory/keycard"
+
+cat > "$ENGINE/README" << 'ROOM2'
+ENGINE ROOM - Space Station Epsilon
+
+The flashlight illuminates a massive engine core surrounded by catwalks.
+The debris pile has been disturbed where you found the keycard.
+
+Exits:
+  west/ -> Corridor
+ROOM2
+
+rm "$ENGINE/take_keycard"
+SCRIPT
+chmod +x "$ENGINE/take_keycard"

@@ -1,0 +1,9 @@
+BRIDGE - Space Station Epsilon
+
+The bridge is silent. A large console dominates the center of the room.
+Its screen is dark — it looks like it needs a keycard to activate.
+
+If you have the keycard, run ./use_keycard to activate the console.
+
+Exits:
+  south/ -> Corridor

@@ -1,0 +1,17 @@
+#!/bin/bash
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+STATION_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+if [ ! -f "$STATION_DIR/inventory/keycard" ]; then
+    echo "You don't have a keycard. The console stays dark."
+    exit 1
+fi
+
+echo "You slide the keycard into the console. Screens flicker to life."
+echo "The station's distress beacon activates — a rescue signal pulses"
+echo "out into deep space."
+echo ""
+echo "*** YOU WIN ***"
+
+# Write a win marker for evaluation
+touch "$STATION_DIR/.win"

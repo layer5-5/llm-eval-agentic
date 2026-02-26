@@ -1,0 +1,132 @@
+=== Eval: openrouter/google/gemini-2.5-flash [bash] ===
+Token limit: 50000
+
+[Turn 1] +360 tokens (total: 360)
+  LLM: cat README
+  OUT: AIRLOCK - Space Station Epsilon
+
+You are in the station's airlock. Emergency lights pulse red.
+The outer hatch is sealed shut — vacuum on the other side.
+
+Exits:
+  north/ -> Corridor
+[Turn 2] +408 tokens (total: 768)
+  LLM: ls
+  OUT: north
+README
+[Turn 3] +413 tokens (total: 1181)
+  LLM: cd north
+  OUT: 
+[Turn 4] +419 tokens (total: 1600)
+  LLM: cat README
+  OUT: CORRIDOR - Space Station Epsilon
+
+A long metal corridor stretches before you. Sparks drip from
+damaged ceiling panels.
+
+Exits:
+  south/  -> Airlock
+  north/  -> Bridge
+  east/   -> Engine Room
+  west/
+[Turn 5] +480 tokens (total: 2080)
+  LLM: ls
+  OUT: east
+north
+README
+south
+west
+[Turn 6] +491 tokens (total: 2571)
+  LLM: cd east
+  OUT: 
+[Turn 7] +497 tokens (total: 3068)
+  LLM: cat README
+  OUT: ENGINE ROOM - Space Station Epsilon
+
+The engine room is pitch black. You can barely see anything.
+You hear the hum of dormant machinery.
+
+Near the entrance, you feel something on a shelf — it might be
+[Turn 8] +561 tokens (total: 3629)
+  LLM: ls
+  OUT: flashlight
+README
+west
+[Turn 9] +568 tokens (total: 4197)
+  LLM: ./flashlight
+  OUT: You grab the flashlight from the shelf and switch it on.
+The beam cuts through the darkness.
+
+The light reveals a massive engine core surrounded by catwalks.
+Under a pile of debris near the wall, you 
+[Turn 10] +633 tokens (total: 4830)
+  LLM: ls
+  OUT: flashlight
+README
+take_keycard
+west
+[Turn 11] +648 tokens (total: 5478)
+  LLM: ./take_keycard
+  OUT: You pull the keycard from the debris. It has the captain's photo on it.
+The keycard is now in your inventory.
+[Turn 12] +680 tokens (total: 6158)
+  LLM: ls ../inventory
+  OUT: flashlight
+keycard
+README
+[Turn 13] +688 tokens (total: 6846)
+  LLM: cd west
+  OUT: 
+[Turn 14] +694 tokens (total: 7540)
+  LLM: cat README
+  OUT: CORRIDOR - Space Station Epsilon
+
+A long metal corridor stretches before you. Sparks drip from
+damaged ceiling panels.
+
+Exits:
+  south/  -> Airlock
+  north/  -> Bridge
+  east/   -> Engine Room
+  west/
+[Turn 15] +755 tokens (total: 8295)
+  LLM: ls
+  OUT: east
+north
+README
+south
+west
+[Turn 16] +766 tokens (total: 9061)
+  LLM: cd north
+  OUT: 
+[Turn 17] +772 tokens (total: 9833)
+  LLM: cat README
+  OUT: BRIDGE - Space Station Epsilon
+
+The bridge is silent. A large console dominates the center of the room.
+Its screen is dark — it looks like it needs a keycard to activate.
+
+If you have the keycard, run
+[Turn 18] +841 tokens (total: 10674)
+  LLM: ls
+  OUT: README
+south
+use_keycard
+[Turn 19] +854 tokens (total: 11528)
+  LLM: ./use_keycard
+  OUT: You slide the keycard into the console. Screens flicker to life.
+The station's distress beacon activates — a rescue signal pulses
+out into deep space.
+
+*** YOU WIN ***
+
+  *** WIN ***
+
+=== Results ===
+  Model:       openrouter/google/gemini-2.5-flash
+  Mode:        bash
+  Won:         True
+  Gave up:     False
+  Total tokens: 11528
+  Turns:       19
+  Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Gemini_2.5_Flash_bash.log

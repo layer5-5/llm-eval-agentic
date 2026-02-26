@@ -1,0 +1,7 @@
+models:
+  - name: openrouter/openai/gpt-oss-120b
+    label: GPT-OSS-120B
+  - name: openrouter/meta-llama/llama-3.3-70b-instruct
+    label: Llama 3.3 70B
+  - name: openrouter/google/gemini-2.5-flash
+    label: Gemini 2.5 Flash

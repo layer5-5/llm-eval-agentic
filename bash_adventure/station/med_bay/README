@@ -1,0 +1,9 @@
+MED BAY - Space Station Epsilon
+
+A small medical bay with overturned supply carts.
+A crew log sits on the counter — it might have useful information.
+
+Read it with: cat crew_log.txt
+
+Exits:
+  east/ -> Corridor

@@ -1,0 +1,65 @@
+=== Eval: openrouter/meta-llama/llama-3.3-70b-instruct [mcp] ===
+Token limit: 50000
+
+[Turn 1] +770 tokens (total: 770)
+  TOOL: look(None)
+  OUT:  You are in the station's airlock. Emergency lights pulse red. The outer hatch is sealed shut — vacuum on the other side. A door leads into the corridor to the north.
+[Turn 2] +924 tokens (total: 1694)
+  TOOL: go({'direction': 'north'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 3] +1000 tokens (total: 2694)
+  TOOL: go({'direction': 'north'})
+  OUT:  You enter the Bridge.
+
+The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 4] +1079 tokens (total: 3773)
+  TOOL: look({})
+  OUT:  The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 5] +1151 tokens (total: 4924)
+  TOOL: go({'direction': 'south'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 6] +1204 tokens (total: 6128)
+  TOOL: go({'direction': 'east'})
+  OUT:  You enter the Engine Room.
+
+The engine room is pitch black. You can barely see anything. You hear the hum of dormant machinery. Near the entrance, you feel something on a shelf — it might be a flashli
+[Turn 7] +1318 tokens (total: 7446)
+  TOOL: take({'item': 'flashlight'})
+  OUT:  You pick up the flashlight.
+[Turn 8] +1318 tokens (total: 8764)
+  TOOL: use({'item': 'flashlight'})
+  OUT:  You switch on the flashlight. The beam cuts through the darkness. You can see the engine core now — and something glinting under a pile of debris near the wall. It looks like a keycard.
+[Turn 9] +1427 tokens (total: 10191)
+  TOOL: take({'item': 'keycard'})
+  OUT:  You pick up the keycard.
+[Turn 10] +1468 tokens (total: 11659)
+  TOOL: go({'direction': 'west'})
+  OUT:  You enter the Corridor.
+
+A long metal corridor stretches before you. Sparks drip from damaged ceiling panels. Doors lead to the bridge (north), engine room (east), and med bay (west). The airlock is t
+[Turn 11] +1546 tokens (total: 13205)
+  TOOL: go({'direction': 'north'})
+  OUT:  You enter the Bridge.
+
+The bridge is silent. A large console dominates the center of the room. Its screen is dark — it looks like it needs a keycard to activate. The corridor is to the south.
+[Turn 12] +1626 tokens (total: 14831)
+  TOOL: use({'item': 'keycard'})
+  OUT:  You slide the keycard into the console. Screens flicker to life. The station's distress beacon activates — a rescue signal pulses out into deep space.
+
+*** YOU WIN ***
+Completed in 13 moves.
+
+  *** WIN ***
+
+=== Results ===
+  Model:       openrouter/meta-llama/llama-3.3-70b-instruct
+  Mode:        mcp
+  Won:         True
+  Gave up:     False
+  Total tokens: 14831
+  Turns:       12
+  Log:         /var/home/rafa/dev/llm-eval-agentic/eval/../eval/logs/Llama_3.3_70B_mcp.log
